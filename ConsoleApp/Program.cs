@@ -39,7 +39,7 @@ internal class Program
 		Print(comment, queryLINQ1.Take(10).ToList());
 
 		var queryLINQ2 = from emp in db.Teachers
-						 where emp.Name == "Евгений"
+						 where emp.Position == "Старший преподаватель"
 						 select new
 						 {
 							 Имя_Преподавателя = emp.Name,
@@ -118,7 +118,7 @@ internal class Program
 		};
 		db.Departments.Add(op);
 		db.SaveChanges();
-		comment = "Выборка операций после вставки новой кафедры";
+		comment = "Выборка кафедр после вставки новой кафедры";
 		var queryLINQ2 = from m in db.Departments
 						 where m.Name == "New department 1"
 						 select new
@@ -139,7 +139,7 @@ internal class Program
 			db.Faculties.RemoveRange(genre);
 			db.SaveChanges();
 		}
-		string comment = "Выборка категорий после удаления жанра";
+		string comment = "Выборка факультетов после удаления жанра";
 		var queryLINQ1 = from g in db.Faculties
 						 where g.Name == "New genre 1"
 						 select new
@@ -156,7 +156,7 @@ internal class Program
 			db.Departments.RemoveRange(deps);
 			db.SaveChanges();
 		}
-		comment = "Выборка операций после удаления категорий";
+		comment = "Выборка кафедр после удаления категорий";
 		var queryLINQ2 = from m in db.Departments
 						 where m.Name == "New department 1"
 						 select new
@@ -185,7 +185,7 @@ internal class Program
 						 where s.LabHours == 129
 						 select new
 						 {
-							 Название_операции = s.Name,
+							 Название_дисциплины = s.Name,
 							 Часы_Лаб = s.LabHours,
 							 Часы_Лекций = s.LectureHours
 						 };
