@@ -33,7 +33,7 @@ internal class Program
 		var queryLINQ1 = from g in db.Faculties
 						 select new
 						 {
-							 Название_Категории = g.Name,
+							 Название_Факультета = g.Name,
 						 };
 		string comment = "1. Результат выполнения запроса на выборку всех данных из таблицы, стоящей в схеме базы данных на стороне отношения 'Один'";
 		Print(comment, queryLINQ1.Take(10).ToList());
@@ -139,7 +139,7 @@ internal class Program
 			db.Faculties.RemoveRange(genre);
 			db.SaveChanges();
 		}
-		string comment = "Выборка факультетов после удаления жанра";
+		string comment = "Выборка факультетов после удаления";
 		var queryLINQ1 = from g in db.Faculties
 						 where g.Name == "New genre 1"
 						 select new
@@ -156,7 +156,7 @@ internal class Program
 			db.Departments.RemoveRange(deps);
 			db.SaveChanges();
 		}
-		comment = "Выборка кафедр после удаления категорий";
+		comment = "Выборка кафедр после удаления";
 		var queryLINQ2 = from m in db.Departments
 						 where m.Name == "New department 1"
 						 select new
