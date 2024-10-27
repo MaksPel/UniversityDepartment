@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UniversityDepartment.Application\UniversityDepartment.Application.csproj" />
+    <ProjectReference Include="..\UniversityDepartment.Persistence\UniversityDepartment.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

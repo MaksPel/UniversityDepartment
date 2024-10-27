@@ -19,6 +19,6 @@ namespace UniversityDepartment.Persistence.Repositories
 				.ToListAsync();
 
 		public IEnumerable<Faculty> GetTopFaculties(int rows) =>
-			FindAll().Take(rows).ToList();
+			[.. FindAll().Include(x => x.Departments).Take(rows)];
 	}
 }

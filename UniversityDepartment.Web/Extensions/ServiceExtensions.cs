@@ -1,9 +1,9 @@
 ﻿using Contracts;
-using EnterpriseAccounting.Application;
-using EnterpriseAccounting.Persistence;
 using Microsoft.EntityFrameworkCore;
+using UniversityDepartment.Application.Services;
+using UniversityDepartment.Persistence;
 
-namespace EnterpriseAccounting.WebMiddleware.Extensions;
+namespace UniversityDepartment.Web.Extensions;
 
 public static class ServiceExtensions
 {
@@ -18,7 +18,7 @@ public static class ServiceExtensions
 
 	public static void ConfigureSqlContext(this IServiceCollection services,
 		IConfiguration configuration) =>
-		services.AddDbContext<EnterpriseAccountingContext>(opts =>
+		services.AddDbContext<UniversityDepartmentContext>(opts =>
 			opts.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b =>
 			{
 				b.EnableRetryOnFailure();

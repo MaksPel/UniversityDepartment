@@ -19,6 +19,6 @@ namespace UniversityDepartment.Persistence.Repositories
 				.ToListAsync();
 
 		public IEnumerable<Course> GetTopCourses(int rows) =>
-			[.. FindAll().Take(rows)];
+			[.. FindAll().Include(x => x.Subjects).Include(x => x.Specialty).Take(rows)];
 	}
 }
