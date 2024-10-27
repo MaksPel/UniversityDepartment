@@ -1,8 +1,8 @@
-﻿using Contracts;
-using UniversityDepartment.Domain.Models;
-using System.Linq.Expressions;
-using Microsoft.Extensions.Caching.Memory;
+﻿using System.Linq.Expressions;
+using Contracts;
 using Contracts.Services;
+using Microsoft.Extensions.Caching.Memory;
+using UniversityDepartment.Domain.Models;
 
 namespace UniversityDepartment.Application.Services;
 
@@ -37,7 +37,7 @@ internal sealed class FacultyService : IFacultyService
 		if (!_cache.TryGetValue(cacheKey, out IEnumerable<Faculty>? faculties))
 		{
 			faculties = _rep.Faculties.GetTopFaculties(_rowsNumber);
-			if(faculties != null)
+			if (faculties != null)
 
 			{
 				_cache.Set(cacheKey, faculties,

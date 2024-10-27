@@ -1,6 +1,6 @@
 using Contracts.Repositories;
-using UniversityDepartment.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using UniversityDepartment.Domain.Models;
 
 namespace UniversityDepartment.Persistence.Repositories
 {
@@ -15,7 +15,7 @@ namespace UniversityDepartment.Persistence.Repositories
 
 		public async Task<IEnumerable<Subject>> GetAllSubjectsAsync(bool trackChanges = false) =>
 			await FindAll(trackChanges)
-				.OrderBy(s => s.Name) 
+				.OrderBy(s => s.Name)
 				.ToListAsync();
 
 		public IEnumerable<Subject> GetTopSubjects(int rows) =>

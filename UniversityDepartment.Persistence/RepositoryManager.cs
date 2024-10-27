@@ -2,7 +2,7 @@
 using Contracts.Repositories;
 using UniversityDepartment.Persistence.Repositories;
 
-namespace UniversityDepartment.Persistence 
+namespace UniversityDepartment.Persistence
 {
 	public class RepositoryManager : IRepositoryManager
 	{

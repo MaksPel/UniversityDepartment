@@ -1,8 +1,8 @@
-﻿using Contracts;
-using UniversityDepartment.Domain.Models;
-using System.Linq.Expressions;
-using Microsoft.Extensions.Caching.Memory;
+﻿using System.Linq.Expressions;
+using Contracts;
 using Contracts.Services;
+using Microsoft.Extensions.Caching.Memory;
+using UniversityDepartment.Domain.Models;
 
 namespace UniversityDepartment.Application.Services;
 

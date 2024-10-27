@@ -1,7 +1,6 @@
-using Microsoft.EntityFrameworkCore;
 using Contracts.Repositories;
+using Microsoft.EntityFrameworkCore;
 using UniversityDepartment.Domain.Models;
-using UniversityDepartment.Persistence.Repositories;
 
 namespace UniversityDepartment.Persistence.Repositories;
 

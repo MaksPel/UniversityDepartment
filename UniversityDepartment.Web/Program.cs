@@ -1,13 +1,7 @@
-using Microsoft.AspNetCore.Cors.Infrastructure;
-using Microsoft.AspNetCore.HttpOverrides;
 using System.Text.Json;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Contracts.Repositories;
-using Contracts.Services;
 using Contracts;
-using System.Security.Principal;
-using System.Transactions;
+using Contracts.Services;
+using Microsoft.AspNetCore.HttpOverrides;
 using UniversityDepartment.Domain.Models;
 using UniversityDepartment.Web.Extensions;
 
@@ -124,7 +118,6 @@ public class Program
 				"<BODY><H1>Список факультетов</H1>" +
 				"<TABLE BORDER=1 cellspacing=0>";
 			HtmlString += "<TH>";
-			HtmlString += "<TD>ID Факультета</TD>";
 			HtmlString += "<TD>Название</TD>";
 			HtmlString += "</TH>";
 
@@ -154,7 +147,6 @@ public class Program
 				"<BODY><H1>Список специальностей</H1>" +
 				"<TABLE BORDER=1 cellspacing=0>";
 			HtmlString += "<TH>";
-			HtmlString += "<TD>ID Специальности</TD>";
 			HtmlString += "<TD>Название</TD>";
 			HtmlString += "<TD>Отдел</TD>";
 			HtmlString += "</TH>";
@@ -186,7 +178,6 @@ public class Program
 				"<BODY><H1>Список предметов</H1>" +
 				"<TABLE BORDER=1 cellspacing=0>";
 			HtmlString += "<TH>";
-			HtmlString += "<TD>ID Предмета</TD>";
 			HtmlString += "<TD>Название</TD>";
 			HtmlString += "<TD>Часы лекций</TD>";
 			HtmlString += "<TD>Практические часы</TD>";
@@ -224,7 +215,6 @@ public class Program
 				"<BODY><H1>Список преподавателей</H1>" +
 				"<TABLE BORDER=1 cellspacing=0>";
 			HtmlString += "<TH>";
-			HtmlString += "<TD>ID Преподавателя</TD>";
 			HtmlString += "<TD>Имя</TD>";
 			HtmlString += "<TD>Фамилия</TD>";
 			HtmlString += "<TD>Отчество</TD>";
@@ -262,7 +252,6 @@ public class Program
 				"<BODY><H1>Список курсов</H1>" +
 				"<TABLE BORDER=1 cellspacing=0>";
 			HtmlString += "<TH>";
-			HtmlString += "<TD>ID Курса</TD>";
 			HtmlString += "<TD>Номер курса</TD>";
 			HtmlString += "<TD>Номер семестра</TD>";
 			HtmlString += "<TD>Специальность</TD>";
@@ -296,7 +285,6 @@ public class Program
 				"<BODY><H1>Список отделов</H1>" +
 				"<TABLE BORDER=1 cellspacing=0>";
 			HtmlString += "<TH>";
-			HtmlString += "<TD>ID Отдела</TD>";
 			HtmlString += "<TD>Название</TD>";
 			HtmlString += "<TD>Факультет</TD>";
 			HtmlString += "<TD>Выпускающий</TD>";

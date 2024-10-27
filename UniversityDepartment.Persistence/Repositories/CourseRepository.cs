@@ -1,6 +1,6 @@
 using Contracts.Repositories;
-using UniversityDepartment.Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using UniversityDepartment.Domain.Models;
 
 namespace UniversityDepartment.Persistence.Repositories
 {
