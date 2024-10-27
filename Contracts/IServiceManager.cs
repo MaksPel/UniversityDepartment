@@ -1,5 +1,4 @@
-﻿using Contracts.Repositories;
-using Contracts.Services;
+﻿using Contracts.Services;
 
 namespace Contracts;
 
