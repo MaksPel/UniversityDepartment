@@ -343,7 +343,7 @@ public class Program
 		});
 
 		string tableHtml = "<TABLE BORDER=1 cellspacing=0>";
-		tableHtml += "<TH><TD>ID Преподавателя</TD><TD>Имя</TD><TD>Фамилия</TD><TD>Должность</TD><TD>Возраст</TD></TH>";
+		tableHtml += "<TH><TD>Имя</TD><TD>Фамилия</TD><TD>Должность</TD><TD>Возраст</TD></TH>";
 
 		foreach (Teacher teacher in teachers ?? Enumerable.Empty<Teacher>())
 		{
@@ -366,7 +366,7 @@ public class Program
 			"Поиск по имени:<BR><INPUT type='text' name='name' value='" + searchData.Name + "'>" +
 			"<BR>Поиск по фамилии:<BR><INPUT type='text' name='surname' value='" + searchData.Surname + "'>" +
 			"<BR>Выберите должность:<BR><SELECT name='position'>" +
-			"<OPTION value=''>Все</OPTION>"; // Опция "Все"
+			"<OPTION value=''>Все</OPTION>";
 
 		foreach (var position in positions)
 		{
@@ -418,7 +418,7 @@ public class Program
 		context.Session.SetString("searchData", JsonSerializer.Serialize(searchData));
 
 		string tableHtml = "<TABLE BORDER=1 cellspacing=0>";
-		tableHtml += "<TH><TD>ID Преподавателя</TD><TD>Имя</TD><TD>Фамилия</TD><TD>Должность</TD><TD>Возраст</TD></TH>";
+		tableHtml += "<TH><TD>Имя</TD><TD>Фамилия</TD><TD>Должность</TD><TD>Возраст</TD></TH>";
 
 		foreach (Teacher teacher in teachers ?? Enumerable.Empty<Teacher>())
 		{
@@ -440,7 +440,7 @@ public class Program
 			"Поиск по имени:<BR><INPUT type='text' name='name' value='" + searchData.Name + "'>" +
 			"<BR>Поиск по фамилии:<BR><INPUT type='text' name='surname' value='" + searchData.Surname + "'>" +
 			"<BR>Выберите должность:<BR><SELECT name='position'>" +
-			"<OPTION value=''>Все</OPTION>"; // Опция "Все"
+			"<OPTION value=''>Все</OPTION>";
 
 		foreach (var position in positions)
 		{

@@ -28,7 +28,7 @@ internal sealed class SubjectService : ISubjectService
 		IEnumerable<Subject> subjects = _rep.Subjects.GetTopSubjects(_rowsNumber);
 		_cache.Set(cacheKey, subjects, new MemoryCacheEntryOptions
 		{
-			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(298)
+			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(290)
 		});
 	}
 
@@ -41,7 +41,7 @@ internal sealed class SubjectService : ISubjectService
 			{
 				_cache.Set(cacheKey, subjects,
 				new MemoryCacheEntryOptions()
-					.SetAbsoluteExpiration(TimeSpan.FromSeconds(298)));
+					.SetAbsoluteExpiration(TimeSpan.FromSeconds(290)));
 			}
 		}
 		return subjects;
@@ -52,7 +52,7 @@ internal sealed class SubjectService : ISubjectService
 		IEnumerable<Subject> subjects = _rep.Subjects.FindByCondition(expression).Take(_rowsNumber);
 		_cache.Set(cacheKey, subjects, new MemoryCacheEntryOptions
 		{
-			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(298)
+			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(290)
 		});
 	}
 }

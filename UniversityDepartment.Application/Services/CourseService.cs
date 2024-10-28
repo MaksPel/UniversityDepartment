@@ -28,7 +28,7 @@ internal sealed class CourseService : ICourseService
 		IEnumerable<Course> courses = _rep.Courses.GetTopCourses(_rowsNumber);
 		_cache.Set(cacheKey, courses, new MemoryCacheEntryOptions
 		{
-			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(298)
+			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(290)
 		});
 	}
 
@@ -41,7 +41,7 @@ internal sealed class CourseService : ICourseService
 			{
 				_cache.Set(cacheKey, courses,
 				new MemoryCacheEntryOptions()
-					.SetAbsoluteExpiration(TimeSpan.FromSeconds(298)));
+					.SetAbsoluteExpiration(TimeSpan.FromSeconds(290)));
 			}
 		}
 		return courses;
@@ -52,7 +52,7 @@ internal sealed class CourseService : ICourseService
 		IEnumerable<Course> courses = _rep.Courses.FindByCondition(expression).Take(_rowsNumber);
 		_cache.Set(cacheKey, courses, new MemoryCacheEntryOptions
 		{
-			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(298)
+			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(290)
 		});
 	}
 }

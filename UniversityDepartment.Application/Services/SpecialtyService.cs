@@ -28,7 +28,7 @@ internal sealed class SpecialtyService : ISpecialtyService
 		IEnumerable<Specialty> specialties = _rep.Specialties.GetTopSpecialties(_rowsNumber);
 		_cache.Set(cacheKey, specialties, new MemoryCacheEntryOptions
 		{
-			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(298)
+			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(290)
 		});
 	}
 
@@ -41,7 +41,7 @@ internal sealed class SpecialtyService : ISpecialtyService
 			{
 				_cache.Set(cacheKey, specialties,
 				new MemoryCacheEntryOptions()
-					.SetAbsoluteExpiration(TimeSpan.FromSeconds(298)));
+					.SetAbsoluteExpiration(TimeSpan.FromSeconds(290)));
 			}
 		}
 		return specialties;
@@ -52,7 +52,7 @@ internal sealed class SpecialtyService : ISpecialtyService
 		IEnumerable<Specialty> specialties = _rep.Specialties.FindByCondition(expression).Take(_rowsNumber);
 		_cache.Set(cacheKey, specialties, new MemoryCacheEntryOptions
 		{
-			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(298)
+			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(290)
 		});
 	}
 }

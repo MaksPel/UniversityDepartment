@@ -28,7 +28,7 @@ internal sealed class DepartmentService : IDepartmentService
 		IEnumerable<Department> departments = _rep.Departments.GetDepartmentsTop(_rowsNumber);
 		_cache.Set(cacheKey, departments, new MemoryCacheEntryOptions
 		{
-			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(298)
+			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(290)
 		});
 	}
 
@@ -41,7 +41,7 @@ internal sealed class DepartmentService : IDepartmentService
 			{
 				_cache.Set(cacheKey, departments,
 				new MemoryCacheEntryOptions()
-					.SetAbsoluteExpiration(TimeSpan.FromSeconds(298)));
+					.SetAbsoluteExpiration(TimeSpan.FromSeconds(290)));
 			}
 		}
 		return departments;
@@ -52,7 +52,7 @@ internal sealed class DepartmentService : IDepartmentService
 		IEnumerable<Department> departments = _rep.Departments.FindByCondition(expression).Take(_rowsNumber);
 		_cache.Set(cacheKey, departments, new MemoryCacheEntryOptions
 		{
-			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(298)
+			AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(290)
 		});
 	}
 }
